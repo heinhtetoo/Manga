@@ -1,5 +1,7 @@
 package heinhtetoo.manga.controllers;
 
+import android.view.View;
+
 import heinhtetoo.manga.data.vos.MangaVO;
 
 /**
@@ -7,5 +9,5 @@ import heinhtetoo.manga.data.vos.MangaVO;
  */
 
 public interface MangaItemController extends BaseController {
-    void onClickManga(MangaVO manga);
+    void onClickManga(View view, MangaVO manga);
 }

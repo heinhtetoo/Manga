@@ -1,11 +1,15 @@
 package heinhtetoo.manga.activities;
 
 import android.content.Intent;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.ActivityOptionsCompat;
+import android.support.v4.util.Pair;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -63,15 +67,20 @@ public class MainActivity extends AppCompatActivity implements MangaItemControll
         mMangaListAdapter.setNewData(mangaVOs);
     }
 
+    @Override
+    public void onClickManga(View view, MangaVO manga) {
+        Intent intent = MangaDetailActivity.newIntent(this.getApplicationContext(), manga.getId(), manga.getTitle(), manga.getImage());
+
+        //make shared element transition
+        overridePendingTransition(R.anim.pop_enter, R.anim.pop_exit);
+        ActivityOptionsCompat activityOptionsCompat = ActivityOptionsCompat
+                .makeSceneTransitionAnimation(this, new Pair(view.findViewById(R.id.iv_image), "manga image animation"));
+        ActivityCompat.startActivity(this, intent, activityOptionsCompat.toBundle());
+    }
+
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void OnMangaListAdapterDataSetChanged(DataEvents.MangaListAdapterDataSetChangedEvent event) {
         mMangaListAdapter.clearData();
         mMangaListAdapter.setNewData(MangaModel.getObjInstance().getmMangaList());
-    }
-
-    @Override
-    public void onClickManga(MangaVO manga) {
-        Intent intent = MangaDetailActivity.newIntent(this.getApplicationContext(), manga.getId(), manga.getTitle());
-        startActivity(intent);
     }
 }
