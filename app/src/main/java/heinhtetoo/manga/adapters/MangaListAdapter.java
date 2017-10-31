@@ -1,9 +1,13 @@
-package heinhtetoo.manga;
+package heinhtetoo.manga.adapters;
 
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
+
+import heinhtetoo.manga.views.viewholders.MangaVH;
+import heinhtetoo.manga.data.vos.MangaVO;
+import heinhtetoo.manga.R;
+import heinhtetoo.manga.controllers.MangaItemController;
 
 /**
  * Created by Hein Htet Oo on 10/29/2017.

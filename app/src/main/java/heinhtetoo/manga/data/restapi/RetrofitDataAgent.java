@@ -1,4 +1,4 @@
-package heinhtetoo.manga;
+package heinhtetoo.manga.data.restapi;
 
 import android.util.Log;
 
@@ -6,6 +6,8 @@ import com.google.gson.Gson;
 
 import org.greenrobot.eventbus.EventBus;
 
+import heinhtetoo.manga.events.DataEvents;
+import heinhtetoo.manga.data.restapi.response.MangaListResponse;
 import okhttp3.OkHttpClient;
 import retrofit2.Call;
 import retrofit2.Callback;

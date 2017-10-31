@@ -1,4 +1,4 @@
-package heinhtetoo.manga;
+package heinhtetoo.manga.views.viewholders;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;

@@ -1,4 +1,4 @@
-package heinhtetoo.manga;
+package heinhtetoo.manga.data.restapi;
 
 /**
  * Created by Hein Htet Oo on 10/30/2017.

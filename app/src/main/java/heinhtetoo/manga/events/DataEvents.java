@@ -1,6 +1,8 @@
-package heinhtetoo.manga;
+package heinhtetoo.manga.events;
 
 import java.util.ArrayList;
+
+import heinhtetoo.manga.data.vos.MangaVO;
 
 /**
  * Created by Hein Htet Oo on 10/30/2017.

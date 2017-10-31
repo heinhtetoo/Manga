@@ -1,4 +1,4 @@
-package heinhtetoo.manga;
+package heinhtetoo.manga.adapters;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -6,6 +6,8 @@ import android.view.LayoutInflater;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import heinhtetoo.manga.views.viewholders.BaseViewHolder;
 
 /**
  * Created by aung on 6/13/17.
