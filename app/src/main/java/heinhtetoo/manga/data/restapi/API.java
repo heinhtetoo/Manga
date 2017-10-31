@@ -1,5 +1,7 @@
-package heinhtetoo.manga;
+package heinhtetoo.manga.data.restapi;
 
+import heinhtetoo.manga.data.vos.MangaDetailVO;
+import heinhtetoo.manga.data.restapi.response.MangaListResponse;
 import retrofit2.Call;
 import retrofit2.http.GET;
 

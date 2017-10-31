@@ -1,4 +1,4 @@
-package heinhtetoo.manga;
+package heinhtetoo.manga.controllers;
 
 /**
  * Created by Hein Htet Oo on 10/31/2017.

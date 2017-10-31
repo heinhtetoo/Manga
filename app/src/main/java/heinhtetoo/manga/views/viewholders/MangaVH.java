@@ -1,6 +1,5 @@
-package heinhtetoo.manga;
+package heinhtetoo.manga.views.viewholders;
 
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -9,6 +8,9 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 
 import butterknife.Bind;
+import heinhtetoo.manga.R;
+import heinhtetoo.manga.controllers.MangaItemController;
+import heinhtetoo.manga.data.vos.MangaVO;
 
 /**
  * Created by Hein Htet Oo on 10/29/2017.

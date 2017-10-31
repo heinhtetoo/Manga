@@ -1,4 +1,6 @@
-package heinhtetoo.manga;
+package heinhtetoo.manga.controllers;
+
+import heinhtetoo.manga.data.vos.MangaVO;
 
 /**
  * Created by Hein Htet Oo on 10/31/2017.

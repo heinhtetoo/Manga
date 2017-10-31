@@ -1,8 +1,10 @@
-package heinhtetoo.manga;
+package heinhtetoo.manga.data.restapi.response;
 
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
+
+import heinhtetoo.manga.data.vos.MangaVO;
 
 /**
  * Created by Hein Htet Oo on 10/30/2017.

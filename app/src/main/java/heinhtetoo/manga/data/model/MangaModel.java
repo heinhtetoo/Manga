@@ -1,10 +1,15 @@
-package heinhtetoo.manga;
+package heinhtetoo.manga.data.model;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 
 import java.util.ArrayList;
+
+import heinhtetoo.manga.events.DataEvents;
+import heinhtetoo.manga.data.restapi.MangaDataAgent;
+import heinhtetoo.manga.data.restapi.RetrofitDataAgent;
+import heinhtetoo.manga.data.vos.MangaVO;
 
 /**
  * Created by Hein Htet Oo on 10/30/2017.
@@ -38,7 +43,7 @@ public class MangaModel {
         mMangaAgent.loadMangaList();
     }
 
-    protected ArrayList<MangaVO> getmMangaList() {
+    public ArrayList<MangaVO> getmMangaList() {
         return mMangaList;
     }
 

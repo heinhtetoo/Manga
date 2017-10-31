@@ -1,4 +1,4 @@
-package heinhtetoo.manga;
+package heinhtetoo.manga.data.vos;
 
 import com.google.gson.annotations.SerializedName;
 
