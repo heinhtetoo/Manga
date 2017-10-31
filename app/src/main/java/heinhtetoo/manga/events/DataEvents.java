@@ -2,6 +2,7 @@ package heinhtetoo.manga.events;
 
 import java.util.ArrayList;
 
+import heinhtetoo.manga.data.vos.MangaDetailVO;
 import heinhtetoo.manga.data.vos.MangaVO;
 
 /**
@@ -23,10 +24,22 @@ public class DataEvents {
     }
 
     public static class MangaDetailLoadedEvent {
+        private MangaDetailVO mangaDetailVO;
 
+        public MangaDetailLoadedEvent(MangaDetailVO mangaDetailVO) {
+            this.mangaDetailVO = mangaDetailVO;
+        }
+
+        public MangaDetailVO getMangaDetailVO() {
+            return mangaDetailVO;
+        }
     }
 
     public static class MangaListAdapterDataSetChangedEvent {
+
+    }
+
+    public static class MangaDetailDataChangedEvent {
 
     }
 }

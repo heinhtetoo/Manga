@@ -6,6 +6,7 @@ import com.google.gson.Gson;
 
 import org.greenrobot.eventbus.EventBus;
 
+import heinhtetoo.manga.data.vos.MangaDetailVO;
 import heinhtetoo.manga.events.DataEvents;
 import heinhtetoo.manga.data.restapi.response.MangaListResponse;
 import okhttp3.OkHttpClient;
@@ -73,5 +74,21 @@ public class RetrofitDataAgent implements MangaDataAgent {
     @Override
     public void loadMangaDetail(String id) {
 
+        Call<MangaDetailVO> loadMangaDetailCall = api.loadMangaDetail(id);
+        loadMangaDetailCall.enqueue(new Callback<MangaDetailVO>() {
+            @Override
+            public void onResponse(Call<MangaDetailVO> call, Response<MangaDetailVO> response) {
+                MangaDetailVO mangaDetailResponse = response.body();
+                if (mangaDetailResponse != null) {
+                    Log.e("success", mangaDetailResponse.toString());
+                    EventBus.getDefault().post(new DataEvents.MangaDetailLoadedEvent(mangaDetailResponse));
+                }
+            }
+
+            @Override
+            public void onFailure(Call<MangaDetailVO> call, Throwable t) {
+                Log.e("fail", call.toString());
+            }
+        });
     }
 }

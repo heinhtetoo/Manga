@@ -45,6 +45,6 @@ public class MangaVH extends BaseViewHolder<MangaVO> {
 
     @Override
     public void onClick(View view) {
-        mMangaItemController.onClickManga(mMangaVO);
+        mMangaItemController.onClickManga(view, mMangaVO);
     }
 }

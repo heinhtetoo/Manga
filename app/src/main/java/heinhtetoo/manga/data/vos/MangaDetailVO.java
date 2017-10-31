@@ -41,7 +41,7 @@ public class MangaDetailVO {
     public List<String> categories = null;
 
     @SerializedName("chapters")
-    public List<List<Integer>> chapters = null;
+    public List<List<Object>> chapters = null;
 
     @SerializedName("chapters_len")
     public Integer chaptersLen;
@@ -131,7 +131,7 @@ public class MangaDetailVO {
         return categories;
     }
 
-    public List<List<Integer>> getChapters() {
+    public List<List<Object>> getChapters() {
         return chapters;
     }
 
@@ -152,7 +152,7 @@ public class MangaDetailVO {
     }
 
     public String getImage() {
-        return image;
+        return "https://cdn.mangaeden.com/mangasimg/" + image;
     }
 
     public String getImageURL() {

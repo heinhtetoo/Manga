@@ -32,86 +32,95 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <RelativeLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="@dimen/margin_medium">
+        android:layout_height="match_parent">
 
-        <ImageView
-            android:id="@+id/iv_manga_cover"
-            android:layout_width="160dp"
-            android:layout_height="200dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/manga_image" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/margin_medium">
 
-        <TextView
-            android:id="@+id/tv_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/margin_xlarge"
-            android:layout_marginTop="@dimen/margin_xlarge"
-            android:layout_toRightOf="@id/iv_manga_cover"
-            android:text="Manga"
-            android:textSize="@dimen/text_heading_1x"
-            android:textStyle="bold" />
+            <ImageView
+                android:id="@+id/iv_manga_cover"
+                android:layout_width="160dp"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/manga_image" />
 
-        <TextView
-            android:id="@+id/tv_author"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@id/tv_title"
-            android:layout_alignStart="@id/tv_title"
-            android:layout_below="@id/tv_title"
-            android:layout_marginTop="@dimen/margin_medium"
-            android:layout_toRightOf="@id/iv_manga_cover"
-            android:text="Author"
-            android:textSize="@dimen/text_regular" />
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_xlarge"
+                android:layout_marginTop="@dimen/margin_xlarge"
+                android:layout_toRightOf="@id/iv_manga_cover"
+                android:maxLines="1"
+                android:text="Manga"
+                android:textSize="@dimen/text_regular_3x"
+                android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/title_category"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@id/tv_title"
-            android:layout_alignStart="@id/tv_title"
-            android:layout_below="@id/tv_author"
-            android:layout_marginTop="@dimen/margin_xlarge"
-            android:text="Categories"
-            android:textSize="@dimen/text_regular_2x"
-            android:textStyle="bold" />
+            <TextView
+                android:id="@+id/tv_author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/tv_title"
+                android:layout_alignStart="@id/tv_title"
+                android:layout_below="@id/tv_title"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_toRightOf="@id/iv_manga_cover"
+                android:maxLines="1"
+                android:text="Author"
+                android:textSize="@dimen/text_regular" />
 
-        <TextView
-            android:id="@+id/tv_categories"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@id/tv_title"
-            android:layout_alignStart="@id/tv_title"
-            android:layout_below="@id/title_category"
-            android:layout_marginTop="@dimen/margin_medium"
-            android:layout_toRightOf="@id/iv_manga_cover"
-            android:text="Categories"
-            android:textSize="@dimen/text_regular" />
+            <TextView
+                android:id="@+id/title_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/tv_title"
+                android:layout_alignStart="@id/tv_title"
+                android:layout_below="@id/tv_author"
+                android:layout_marginTop="@dimen/margin_xlarge"
+                android:text="Categories"
+                android:textSize="@dimen/text_regular_2x"
+                android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/title_description"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/iv_manga_cover"
-            android:layout_marginTop="@dimen/margin_xlarge"
-            android:text="Description"
-            android:textSize="@dimen/text_regular_3x"
-            android:textStyle="bold" />
+            <TextView
+                android:id="@+id/tv_categories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/tv_title"
+                android:layout_alignStart="@id/tv_title"
+                android:layout_below="@id/title_category"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_toRightOf="@id/iv_manga_cover"
+                android:maxLines="2"
+                android:text="Categories"
+                android:textSize="@dimen/text_regular" />
 
-        <TextView
-            android:id="@+id/tv_description"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@id/title_description"
-            android:layout_alignStart="@id/title_description"
-            android:layout_below="@id/title_description"
-            android:layout_marginTop="@dimen/margin_medium"
-            android:text="Description"
-            android:textSize="@dimen/text_regular_2x" />
+            <TextView
+                android:id="@+id/title_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_manga_cover"
+                android:layout_marginTop="@dimen/margin_xlarge"
+                android:text="Description"
+                android:textSize="@dimen/text_regular_2x"
+                android:textStyle="bold" />
 
-    </RelativeLayout>
+            <TextView
+                android:id="@+id/tv_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/title_description"
+                android:layout_alignStart="@id/title_description"
+                android:layout_below="@id/title_description"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:text="Description"
+                android:textSize="@dimen/text_regular_2x" />
+
+        </RelativeLayout>
+
+    </ScrollView>
 
 </LinearLayout>
